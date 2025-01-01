@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <title>title</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("button").click(function () {
+          alert($("#pic").attr("src"));
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <img id="pic" src="./이미지/pikachu.JPG" width="500" height="500" />
+    <br />
+    <button>버튼을 눌러보세요.</button>
+  </body>
+</html>

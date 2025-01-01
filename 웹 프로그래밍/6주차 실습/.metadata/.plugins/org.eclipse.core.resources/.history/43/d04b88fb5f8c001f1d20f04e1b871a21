@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2021111971 이재혁 문제 2</title>
+</head>
+<body>
+	<h1>숫자입력</h1>
+	<form action = "calc" method = "post">
+		<div>숫자1 : <input name = "num1" type = "text"></div>
+		<div>숫자2 : <input name = "num2" type = "text"></div>
+		<input type="submit" value ="제출">
+	</form>
+</body>
+</html>

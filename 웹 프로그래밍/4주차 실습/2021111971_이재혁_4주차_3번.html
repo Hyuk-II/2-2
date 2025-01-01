@@ -1,0 +1,28 @@
+<!-- 2021111971 이재혁 4주차 3번 -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Q3</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+      $(document).ready(function () {
+        // 문서 로딩시 함수 설정
+        $(".changeLink").click(function () {
+          $(".link").attr("href", "http://lib.dongguk.edu");
+        }); // changeLink 버튼 클릭 시 link 클래스의 href를 도서관 URL로 설정
+        $(".changeImg").click(function () {
+          $(".img").attr("src", "./이미지/2.PNG");
+        }); // changeImg 버튼 클릭 시 img 클래스의 src를 2번째 사진으로 설정
+      });
+    </script>
+  </head>
+  <body>
+    <a href="http://www.dongguk.edu" class="link">페이지 이동</a>
+    <button class="changeLink">URL 변경</button>
+    <br />
+    <br />
+    <img class="img" src="./이미지/1.PNG" />
+    <br />
+    <button class="changeImg">사진 변경</button>
+  </body>
+</html>

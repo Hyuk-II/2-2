@@ -1,0 +1,30 @@
+<!-- 2021111971 이재혁 4주차 2번 -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Q2</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".img").hide(); // 문서를 불러들였을 때 이미지 숨김
+        $(".start").click(function () {
+          $(".img").show().slideUp().fadeIn();
+        });
+        // start버튼을 누르면 사진을 보이고 애니메이션 실행
+        // Queue처럼 먼저 호출된 함수가 먼저 실행된다.
+        $(".stop").click(function () {
+          $(".img").hide();
+        }); // stop버튼을 누르면 이미지 숨김
+      });
+    </script>
+  </head>
+  <body>
+    <button class="start">시작</button>
+    <button class="stop">정지</button>
+    <br />
+    <br />
+    <div class="img">
+      <img src="./이미지/1.PNG" />
+    </div>
+  </body>
+</html>

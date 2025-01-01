@@ -1,0 +1,113 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>로그 분석</title>
+    <style>
+        /* 스타일 유지 */
+        .graph-container canvas {
+            display: block;
+            margin: 0 auto;
+            width: 900px !important;
+            height: 400px !important;
+        }
+        #achievementContainer {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            justify-items: center;
+            padding: 20px;
+        }
+        #achievementContainer div {
+            width: 300px;
+            height: 350px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            box-sizing: border-box;
+        }
+        #achievementContainer canvas {
+            width: 250px !important;
+            height: 250px !important;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const goalAchievementData = JSON.parse('<%= request.getAttribute("goalAchievementData") %>');
+        
+        function createPieChartWithTitle(logName, index) {
+            const container = document.createElement('div');
+            container.style.width = '48%';
+            container.style.margin = '1%';
+            container.style.textAlign = 'center';
+            container.style.display = 'inline-block';
+
+            const title = document.createElement('h3');
+            title.textContent = logName;
+            title.style.color = 'white';
+            title.style.marginBottom = '10px';
+            container.appendChild(title);
+
+            const canvasId = `achievementCanvas${index}`;
+            const canvasElement = document.createElement('canvas');
+            canvasElement.id = canvasId;
+            canvasElement.width = 300;
+            canvasElement.height = 300;
+            container.appendChild(canvasElement);
+
+            const achievementContainer = document.getElementById('achievementContainer');
+            achievementContainer.appendChild(container);
+
+            const ctx = canvasElement.getContext('2d');
+            new Chart(ctx, {
+                type: 'pie',
+                data: {
+                    labels: [`${logName} 달성`, `${logName} 미달성`],
+                    datasets: [{
+                        data: [
+                            goalAchievementData[logName],
+                            100 - goalAchievementData[logName]
+                        ],
+                        backgroundColor: [
+                            'rgba(75, 192, 192, 0.7)',
+                            'rgba(255, 99, 132, 0.7)'
+                        ]
+                    }]
+                },
+                options: {
+                    plugins: {
+                        legend: {
+                            display: true,
+                            position: 'bottom'
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function (context) {
+                                    let label = context.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    label += context.raw.toFixed(2) + '%';
+                                    return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        window.onload = function () {
+            const achievementContainer = document.getElementById('achievementContainer');
+            achievementContainer.innerHTML = '';
+            Object.keys(goalAchievementData).forEach((logName, index) => {
+                createPieChartWithTitle(logName, index);
+            });
+        };
+    </script>
+</head>
+<body>
+    <div id="achievementContainer" class="graph-container"></div>
+</body>
+</html>

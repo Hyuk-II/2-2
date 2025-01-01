@@ -1,0 +1,2 @@
+CREATE TABLE board_tbl(id INT, name VARCHAR(20), e_mail VARCHAR(40), title VARCHAR(40),
+content VARCHAR(100), passwd VARCHAR(10), ref INT, PRIMARY KEY(id));

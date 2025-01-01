@@ -1,0 +1,29 @@
+package com.bean;
+
+public class MyBean {
+	private String name;
+	private int point;
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getPoint() {
+		return point;
+	}
+	public void setPoint(int point) {
+		this.point = point;
+	}
+	
+	public String getGrade() {
+		String grade = "";
+		if(point >= 90) {
+			grade = "A";
+		}
+		else if(90 > point && point >=80 ) {
+			
+		}
+		return grade;
+	}
+}

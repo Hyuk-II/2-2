@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <title>title</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".img").hide();
+        $("button").click(function () {
+          $(".img").show("slow");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <button>show it</button>
+    <img src="./이미지/turtle.JPG" alt="" class="img" />
+  </body>
+</html>

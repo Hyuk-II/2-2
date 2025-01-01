@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Q4</title>
+</head>
+<body>
+	<form method = "post" action ="jdbc-test4.jsp">
+		<select name = "find" disabled>
+		<option value="name"> name
+		<option value="address"> address
+		<input type="text" name="search">
+		<input type="submit" value="검색">
+		</select>
+	</form>
+</body>
+</html>

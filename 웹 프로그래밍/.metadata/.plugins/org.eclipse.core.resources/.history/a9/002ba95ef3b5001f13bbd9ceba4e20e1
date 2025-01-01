@@ -1,0 +1,25 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Q7</title>
+</head>
+<body>
+	<%
+	Cookie[] cookies = request.getCookies();
+	
+	String cName;
+	String cValue;
+	
+	for(Cookie cookie : cookies) {
+		cName = cookie.getName();
+		cValue = cookie.getValue();
+	%>
+	<%=cName %> : <%=cValue %>
+	<%
+	}
+	%>
+</body>
+</html>

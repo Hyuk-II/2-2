@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Q4</title>
+</head>
+<body>
+	<form method = "post" action ="jdbc-test4.jsp">
+		<select name = "search">
+		<option value="name">
+		<option value="address">
+		</select>
+	</form>
+</body>
+</html>

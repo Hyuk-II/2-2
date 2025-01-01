@@ -1,0 +1,37 @@
+<!-- 2021111971 이재혁 3주차 3번 -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Q3</title>
+
+    <script language="javascript">
+      window.onload = function () {
+        var map = document.getElementById("map");
+        map.style.visibility = "hidden";
+      }; // 소스를 모드 로드 했을 시 이미지 레이어를 hidden으로 설정
+
+      function changeVisibility() {
+        var radio1 = document.getElementById("1");
+
+        if (radio1.checked) {
+          map.style.visibility = "hidden";
+        } else {
+          map.style.visibility = "visible";
+        }
+      }
+      // 1번째 라디오 버튼의 체크 여부로 레이어 숨김 결정
+    </script>
+  </head>
+  <body>
+    <input
+      type="radio"
+      id="1"
+      name="map"
+      onclick="changeVisibility()"
+      checked
+    />
+    숨기기
+    <input type="radio" id="2" name="map" onclick="changeVisibility()" /> 보이기
+    <div id="map" style="position: relative"><img src="Q3_map.jpg" /></div>
+  </body>
+</html>

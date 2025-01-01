@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Q5</title>
+</head>
+<body>
+	<h2>아래 항목을 입력하시오</h2>
+	<form method = "post" action = "grade.jsp">
+	이름 : <input type="text" name="name"><br>
+	점수 : <input type="text" name="point"><br>
+	<input type="submit" value="입력완료"><input type="reset" value="취소">
+	</form>
+</body>
+</html>

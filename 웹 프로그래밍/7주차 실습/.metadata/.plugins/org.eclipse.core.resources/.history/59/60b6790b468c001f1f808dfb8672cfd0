@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="Q2_202111971_이재혁">
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+        <property name="context-root" value="Q2_202111971_이재혁"/>
+        <property name="java-output-path" value="/Q2_202111971_이재혁/build/classes"/>
+    </wb-module>
+</project-modules>

@@ -1,0 +1,32 @@
+<!-- 2021111971 이재혁 4주차 1번 -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Q1</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+      $(document).ready(function () {
+        // 문서가 로딩되었을 때 실행할 함수
+        $(".upsize").click(function () {
+          $(".box").css("width", "200px");
+        }); // class가 upsize인 버튼을 클릭하면 box class의 width를 100px로 설정한다.
+        $(".downsize").click(function () {
+          $(".box").css("width", "50px");
+        }); // class가 downsize인 버튼을 클릭하면 box class의 width를 50px로 설정한다.
+      });
+    </script>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <button class="upsize">상자 확대</button>
+    <button class="downsize">상자 축소</button>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="java.sql.*" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Q4</title>
+</head>
+<body>
+	<%
+	int id, ref;
+	int rownum = 0;
+	Connection conn = null;
+	Statement stmt = null;
+	ResultSet rs = null;
+	String sql = null, find="", search="";
+	
+	find = request.getParameter("find");
+	search = request.getParameter("search");
+	
+	try {
+		Class.forName("com.mysql.jdbc.Driver");
+		String url = "jdbc:mysql://localhost:3306/wptest?serverTimezone=UTC";
+		conn = DriverManager.getConnection(url,"root","0000");
+	}
+	%>
+</body>
+</html>

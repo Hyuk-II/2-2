@@ -1,0 +1,17 @@
+<!-- 2021111971 이재혁 3주차 1번 -->
+<html>
+  <head>
+    <title>Q1</title>
+    <script type="text/javascript">
+      function getUrl() {
+        return prompt("이동할 웹 사이트 주소를 입력하세요.", "http://");
+      }
+      // prompt로 url을 입력받아 반환하는 함수 선언
+    </script>
+  </head>
+  <body>
+    <p>다음 이동 버튼을 클릭하여 이동할 웹사이트의 주소를 입력하세요.</p>
+    <input type="button" value="이동" onClick="location.href = getUrl()" />
+    <!-- 버튼 클릭시 getUrl() 함수를 실행해 반환한 값으로 location 설정 -->
+  </body>
+</html>

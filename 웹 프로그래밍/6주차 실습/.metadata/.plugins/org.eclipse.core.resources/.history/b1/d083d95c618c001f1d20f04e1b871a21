@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>2021111971 이재혁</title>
+  </head>
+  <body>
+    <h1 align="center">Beer Select Page</h1>
+    <form method="POST" action="LJH2">
+      <p>Select beer characteristics - mvc2</p>
+      Color:
+      <select name="color" size="1">
+        <option value="light">light</option>
+        <option value="amber">amber</option>
+        <option value="dark">dark</option>
+        <option value="brown">brown</option>
+      </select>
+      <br /><br />
+      <center>
+        <input type="submit" />
+      </center>
+    </form>
+  </body>
+</html>

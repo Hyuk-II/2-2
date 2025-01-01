@@ -1,0 +1,33 @@
+<!-- 2021111971 이재혁 3주차 2번 -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Q2</title>
+    <script type="text/javascript">
+      window.onload = function () {
+        div1 = document.getElementById("DIV1"); // DIV1 영역 변수
+        div2 = document.getElementById("DIV2"); // DIV2 영역 변수
+        
+        dimg = document.getElementById("img");
+        img = document.createElement("img"); // img 요소 생성
+        img.setAttribute("src", "back.JPG"); // img 내용 연결
+        dimg.appendChild(img) // dimg에 div에 요소 추가
+      };
+
+      function div1Click() { // DIV1의 속성 변경
+        div1.style.color = "white";
+        div1.style.backgroundColor = "black";
+      }
+
+      function div2Click() { // DIV2에 addtext노드를 추가
+        addtext = document.createTextNode("div2의 영역이죠");
+        div2.appendChild(addtext);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="DIV1" onclick="div1Click()">여긴 DIV1영역</div>
+    <div id="DIV2" onclick="div2Click()">여긴 DIV2영역</div>
+    <div id="img"></div>
+  </body>
+</html>

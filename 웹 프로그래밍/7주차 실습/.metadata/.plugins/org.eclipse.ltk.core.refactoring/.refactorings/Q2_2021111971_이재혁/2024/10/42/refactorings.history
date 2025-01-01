@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Q2_2021111971_이재혁/src/main/webapp/from.html&apos; to &apos;form.html&apos;" description="Rename resource &apos;from.html&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/webapp/from.html" name="form.html" stamp="1729141842475" updateReferences="true"/>
+</session>

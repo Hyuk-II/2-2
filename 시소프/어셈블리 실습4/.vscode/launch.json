@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/jaehyuk/Desktop/대학활동/시소프/어셈블리 실습4",
+      "program": "/Users/jaehyuk/Desktop/대학활동/시소프/어셈블리 실습4/build/Debug/outDebug"
+    }
+  ]
+}

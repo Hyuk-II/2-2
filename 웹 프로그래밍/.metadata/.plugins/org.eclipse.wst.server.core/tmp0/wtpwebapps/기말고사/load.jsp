@@ -1,0 +1,28 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Q7</title>
+</head>
+<body>
+	<%
+	Cookie[] cookies = request.getCookies();
+	
+	String cName, cValue;
+	
+	for(Cookie cookie : cookies) {
+		cName = cookie.getName();
+		cValue = cookie.getValue();
+	%>
+	<%=cName %> : <%= cValue %><br>
+	<%
+	}
+	%>
+	<br>
+	<a href="input.jsp">쿠키 추가하기</a><br><br>
+	<a href="delete_all.jsp">모든 쿠키 삭제하기</a><br><br>
+	<a href="logout_input.jsp">특정 쿠키만 삭제하기</a><br><br>
+</body>
+</html>
